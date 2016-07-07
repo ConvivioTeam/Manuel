@@ -118,7 +118,7 @@ module.exports = (robot) ->
   hug = new Hug robot
   allow_self = process.env._HUG_ALLOW_SELF or "true"
 
-  robot.hear /hug \@([^\s]+)/i, (msg) ->
+  robot.hear /hug \@?([^\s]+)/i, (msg) ->
     subject = msg.match[1]
     sender  = msg.message.user
     if subject.toLowerCase() == 'all' or subject.toLowerCase() == 'here'
