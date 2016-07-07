@@ -6,5 +6,6 @@
   "hubot-redis-brain",
   "hubot-rules",
   "hubot-shipit",
-  "hubot-ive"
+  "hubot-ive",
+  "hubot-heroku-keepalive"
 ]
