@@ -7,5 +7,6 @@
   "hubot-rules",
   "hubot-shipit",
   "hubot-ive",
-  "hubot-heroku-keepalive"
+  "hubot-heroku-keepalive",
+  "hubot-foaas"
 ]
