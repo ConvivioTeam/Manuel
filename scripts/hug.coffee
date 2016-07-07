@@ -120,7 +120,7 @@ module.exports = (robot) ->
 
   robot.hear /hug \@?([^\s]+)/i, (msg) ->
     subject = msg.match[1]
-    sender  = msg.message.user
+    sender  = msg.message.user.name
     if subject.toLowerCase() == 'all' or subject.toLowerCase() == 'here'
       msg.send msg.random hug.groupHugResponses(msg.message.user.name)
     else if allow_self is true or msg.message.user.name.toLowerCase() != subject.toLowerCase()
