@@ -8,5 +8,6 @@
   "hubot-shipit",
   "hubot-ive",
   "hubot-heroku-keepalive",
-  "hubot-foaas"
+  "hubot-foaas",
+  "hubot-weather"
 ]
