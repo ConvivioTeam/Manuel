@@ -6,6 +6,7 @@
   "description": "I know nothing!",
   "dependencies": {
     "hubot": "^2.18.0",
+    "hubot-business-cat": "^1.5.3",
     "hubot-diagnostics": "0.0.1",
     "hubot-factoid": "0.0.1",
     "hubot-foaas": "^1.0.0",

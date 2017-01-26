@@ -9,5 +9,6 @@
   "hubot-ive",
   "hubot-heroku-keepalive",
   "hubot-foaas",
-  "hubot-weather"
+  "hubot-weather",
+  "hubot-business-cat"
 ]
