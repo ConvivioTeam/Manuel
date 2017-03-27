@@ -146,7 +146,7 @@ module.exports = (robot) ->
       currenthugs = 0
       while currenthugs <= totalhugs
         currenthugs++
-        msg.send "@#{subject} #{hug.incrementResponse()} (#{subject} has #{hug.get(subject)} hug#{if hug.get(subject) > 1 then 's' else ''})"
+        msg.send "@#{subject} #{hug.incrementResponse()}"
     else
       msg.send msg.random hug.selfDeniedResponses(msg.message.user.name)
 
