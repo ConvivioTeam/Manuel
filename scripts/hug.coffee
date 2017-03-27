@@ -134,6 +134,22 @@ module.exports = (robot) ->
     else
       msg.send msg.random hug.selfDeniedResponses(msg.message.user.name)
 
+  robot.hear /hugbomb \@?([^\s]+)/i, (msg) ->
+    subject = msg.match[1]
+    sender  = msg.message.user.name
+    if subject.toLowerCase() == 'all' or subject.toLowerCase() == 'here'
+      msg.send msg.random hug.groupHugResponses(msg.message.user.name)
+    else if allow_self is true or msg.message.user.name.toLowerCase() != subject.toLowerCase()
+      hug.increment subject
+      msg.send "@#{subject} #{hug.incrementResponse()} (#{subject} has #{hug.get(subject)} hug#{if hug.get(subject) > 1 then 's' else ''})"
+      totalhugs = hug.randomInt(1, 20)
+      currenthugs = 0
+      while currenthugs <= totalhugs
+        currenthugs++
+        msg.send "@#{subject} #{hug.incrementResponse()} (#{subject} has #{hug.get(subject)} hug#{if hug.get(subject) > 1 then 's' else ''})"
+    else
+      msg.send msg.random hug.selfDeniedResponses(msg.message.user.name)
+
   # robot.hear /(\S+[^-:\s])[: ]*--(\s|$)/, (msg) ->
   #   subject = msg.match[1].toLowerCase()
   #   if allow_self is true or msg.message.user.name.toLowerCase() != subject
